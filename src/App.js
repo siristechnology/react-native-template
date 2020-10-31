@@ -4,6 +4,7 @@ import * as React from 'react';
 import {View, Text, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import {BottomTabs} from './bottom-tabs';
 
 function HomeScreen({navigation}) {
   return (
@@ -32,10 +33,20 @@ function DetailsScreen({navigation}) {
 
 const Stack = createStackNavigator();
 
-function App() {
+function App({initialScreenName}) {
+  const initialRoute =
+    initialScreenName === 'ArticleDetail' ? 'ArticleDetail' : 'Tab';
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        initialRouteName={initialRoute}
+        screenOptions={{headerShown: false}}>
+        <Stack.Screen
+          name="Tab"
+          component={BottomTabs}
+          initialParams={{initialScreenName}}
+        />
         <Stack.Screen
           name="Home"
           component={HomeScreen}
