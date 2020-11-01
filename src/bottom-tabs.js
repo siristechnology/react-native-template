@@ -6,6 +6,7 @@ import {useTheme} from 'react-native-paper';
 import {Feed} from './feed';
 import {Message} from './message';
 import {Notifications} from './notifications';
+import CardExample from './CardExample';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -25,6 +26,13 @@ export const BottomTabs = (props) => {
           borderTopWidth: theme.borderWidth,
           borderTopColor: theme.colors.disabled,
         }}>
+        <Tab.Screen
+          name="CardExample"
+          component={CardExample}
+          options={{
+            tabBarIcon: 'home-account',
+          }}
+        />
         <Tab.Screen
           name="Feed"
           component={Feed}
