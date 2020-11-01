@@ -1,11 +1,12 @@
 {
-  "name": "template",
+  "name": "rntemplate",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android": "react-native run-android --variant unsigneddebug",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "refresh": "adb shell input keyevent 46 46",
     "build": "cd android && ./gradlew app:assembleSignedRelease && cd ..",
     "bundle": "cd android && ./gradlew app:bundleSignedRelease && cd ..",
     "test": "jest",
