@@ -1,4 +1,4 @@
-package com.template;
+package com.siristechnology.rntemplate;
 
 import android.app.Application;
 import android.content.Context;

@@ -6,6 +6,8 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
+    "build": "cd android && ./gradlew app:assembleSignedRelease && cd ..",
+    "bundle": "cd android && ./gradlew app:bundleSignedRelease && cd ..",
     "test": "jest",
     "lint": "eslint ."
   },
