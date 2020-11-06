@@ -8,7 +8,7 @@ target 'template' do
 
   use_react_native!(:path => config["reactNativePath"])
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
 
   target 'templateTests' do
     inherit! :complete
@@ -25,11 +25,3 @@ target 'template' do
   end
 end
 
-target 'template-tvOS' do
-  # Pods for template-tvOS
-
-  target 'template-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end
